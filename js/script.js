@@ -10,8 +10,8 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
-            emails : [],
-        };
+            emails : []
+        }
     },
 
     mounted() {
@@ -20,9 +20,9 @@ createApp({
 
 for(let i = 0; i < 10; i++){
 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-        .then((gino) => {
-            console.log(gino.data.response);
-            this.emails.push(gino.data.response)
+        .then((elem) => {
+            console.log(elem.data.response);
+            this.emails.push(elem.data.response)
         });
     }
 }
